@@ -15,6 +15,12 @@ jobs:
           with:
             persist-credentials: false
 
+        - name: Show Python info
+          run: |
+            python -V
+            python -m pip --version
+            python -m pip show setuptools
+
         - name: Install ReFrame
           run: |
             pip install --user ReFrame-HPC
